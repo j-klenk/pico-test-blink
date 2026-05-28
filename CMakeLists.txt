@@ -48,6 +48,11 @@ pico_enable_stdio_usb(test_blink 1)
 target_link_libraries(test_blink
         pico_stdlib)
 
+target_link_libraries(test_blink
+    pico_stdlib
+    pico_cyw43_arch_none
+)
+
 # Add the standard include files to the build
 target_include_directories(test_blink PRIVATE
         ${CMAKE_CURRENT_LIST_DIR}
